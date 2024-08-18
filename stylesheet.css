@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --moderustic-font: 'Moderustic', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #d1d1d1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 700px;
+    padding: 45px 50px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h3 {
+    font-size: 23px;
+    font-family: var(--moderustic-font);
+    font-weight: 400;
+}
+
+header .score-div {
+    display: flex;
+    gap: 10px;
+}
+
+header .score-div a {
+    font-size: 20px;
+    font-family: var(--moderustic-font);
+}
+
+header .score-div .score {
+    font-size: 20px;
+    font-family: var(--moderustic-font);
+}
+
+/* Right OR Wrong Div */
+
+.rw-div .wrong {
+    display: none;
+    padding: 0;
+    font-size: 15px;
+    font-family: var(--moderustic-font);
+    text-transform: uppercase;
+    color: #ff0000;
+}
+
+.rw-div .right {
+    display: none;
+    padding: 0;
+    font-size: 15px;
+    font-family: var(--moderustic-font);
+    text-transform: uppercase;
+    color: #00af4f;
+}
+
+/* Main Game Container */
+
+main {
+    padding: 100px 50px;
+    width: 600px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .diffi-btns {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .diffi-btns input {
+    display: none;
+}
+
+main .diffi-btns button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    font-size: 16px;
+    font-family: var(--moderustic-font);
+    transition: .10s;
+    animation: diffi-btn-animation .10s linear infinite;
+}
+
+main .diffi-btns button:hover {
+    box-shadow: 0 0 16px #8d8d8d;
+    transform: scale(1.1);
+}
+
+main p {
+    padding: 0 0 20px 0;
+    font-size: 19px;
+    font-family: var(--moderustic-font);
+    text-align: center;
+}
+
+main .difficulty {
+    font-size: 17px;
+    text-align: right;
+}
+
+main #difficulty-a {
+    color: hsl(0, 100%, 50%);
+}
+
+main .form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main .form input {
+    padding: 10px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+main .form button {
+    width: 300px;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-family: var(--moderustic-font);
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    background-color: #adadad;
+    transition: .20s;
+}
+
+main .form button:hover {
+    background-color: #8d8d8d;
+}
+
+@media (max-width: 690px) {
+    header {
+        width: 100%;
+    }
+
+    header h3 {
+        font-size: 20px;
+        font-family: var(--moderustic-font);
+        font-weight: 400;
+    }
+
+    header .score-div a,
+    header .score-div .score {
+        font-size: 16px;
+    }
+
+    main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    header {
+        padding: 70px 25px;
+    }
+
+    header h3 {
+        font-size: 18px;
+        font-family: var(--moderustic-font);
+        font-weight: 400;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    main .diffi-btns {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    main .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    main .form input {
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 15px;
+        border: none;
+        border-radius: 10px;
+    }
+    
+    main .form button {
+        width: 100%;
+        padding: 10px 10px;
+        font-size: 15px;
+        font-family: var(--moderustic-font);
+        font-weight: 500;
+        border: none;
+        border-radius: 10px;
+        background-color: #adadad;
+        transition: .20s;
+    }
+}
+
+@media (max-width: 400px) {
+    header h3 {
+        width: 100px;
+        font-size: 15px;
+    }
+
+    header {
+        padding: 40px 25px;
+    }
+
+    main .diffi-btns button {
+        padding: 7px 10px;
+        border-radius: 10px;
+        border: 1px solid #000000;
+        font-size: 13px;
+        font-family: var(--moderustic-font);
+        transition: .10s;
+        animation: diffi-btn-animation .10s linear infinite;
+    }
+
+    main p {
+        padding: 0 0 20px 0;
+        font-size: 14px;
+        font-family: var(--moderustic-font);
+        text-align: center;
+    }
+
+    main .difficulty,
+    main .difficulty-a {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Number Guessing Game</title>
+</head>
+
+<body>
+    <header>
+        <h3>Number Guessing Game</h3>
+
+        <div class="score-div">
+            <a>Score:</a>
+            <p class="score" id="score">00</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="diffi-btns">
+            <button id="easy-btn">Easy</button>
+            <input type="checkbox" id="easy-checkBx" class="ckeckbtns">
+            <button id="medium-btn">Medium</button>
+            <input type="checkbox" id="medium-checkBx" class="ckeckbtns">
+            <button id="hard-btn">Hard</button>
+            <input type="checkbox" id="hard-checkBx" class="ckeckbtns">
+        </div>
+
+        <div class="game-cont">
+            <p id="game-sent">Select a number between 0 - --</p>
+            <p class="difficulty">Difficulty: <a id="difficulty-a">---</a></p>
+            <div class="form">
+                <input type="number" id="number-input" placeholder="Enter a Guess">
+                <div class="rw-div">
+                    <p class="wrong">wrong</p>
+                    <p class="right">correct</p>
+                </div>
+                <button id="submit-btn">Submit Guess</button>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
