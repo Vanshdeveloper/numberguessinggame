@@ -10,7 +10,7 @@
 
 body {
     height: 100vh;
-    background-color: #d1d1d1;
+     background: linear-gradient(to right, #1a2980, #26d0ce);
     display: flex;
     flex-direction: column;
     align-items: center;
